@@ -3,7 +3,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
-#include "Arduino.h"
+//#include "Arduino.h"
 
 const int CLK = PH4;
 const int DIN = PH6;

@@ -2,7 +2,7 @@
 
 int main()
 {
-  Serial.begin(115200);
+  //Serial.begin(115200);
   DDRD = 0x0F; //lcd
   DDRE = 0x10;
   PORTD = 0x0F;

@@ -227,7 +227,9 @@ void reset()
     {
         field_matrix[i] = {0};
     }
+
     set_servo_angle(90);
+    OCR5A = 62499;
 }
 
 void update_matrix( bool show_piece)
@@ -356,7 +358,7 @@ void sand_animation() //called while sand
 
 void change_gravity()
 {
-    Serial.println("gravity change");
+    //Serial.println("gravity change");
     uint8_t i, j, bit;
     uint8_t old_gravity = gravity;
     int8_t dif;
@@ -384,7 +386,7 @@ void change_gravity()
         }
         else
         {
-            Serial.println("rotate");
+            //Serial.println("rotate");
             for (i = 0; i < 8; ++i) 
             {
                 temp_matrix[i] = 0;
@@ -436,7 +438,7 @@ bool check_hit()
                     retval = true;
                     hit_floor = true;
                     //Serial.print(field_matrix[falling_piece_y_pos+i]);
-                    Serial.println(" hit piece");
+                    //Serial.println(" hit piece");
                 }
             }
         }
@@ -574,10 +576,10 @@ bool fall_piece()
 {   
     bool off_screen = false;
     falling_piece_y_pos += 1;
-    Serial.println(F("fall_piece"));
+    //Serial.println(F("fall_piece"));
     if (check_hit() & hit_floor)
     {
-        Serial.println(".................................");
+        //Serial.println(".................................");
         falling_piece_y_pos -= 1;
         //check piece off screen
         for( uint8_t i = 0; i < 3; i++)
@@ -632,14 +634,14 @@ void clear_lines(bool gravity_change)
         change_gravity();
         OCR5A *= 0.9;  //speed up / difficulty
         TCNT5 = 0;
-        Serial.println(OCR5A);
+        //Serial.println(OCR5A);
     }
 }
 
 void new_piece()
 {
     uint8_t i,j;
-    Serial.println("new_piece");
+    //Serial.println("new_piece");
     //add piece to array
     for (i = 0; i < 3; i++)
     {
@@ -748,7 +750,7 @@ ISR(TIMER5_COMPA_vect)
                 {
                     lost_count++;
                 }
-                Serial.println(F("you suk"));
+                //Serial.println(F("you suk"));
                 write_L();
             }
             break;
