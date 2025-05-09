@@ -54,4 +54,6 @@ starting from the bottom if there is a block below it; if there isn't, then it k
 checks to see if it can go left. If the block can not move left, it then goes right. This causes the
 blocks from earlier to smooth out across the display.
 
+#Video Link
+https://drive.google.com/file/d/1lYJOwza6jdDVMWVrHQDlxFe_u3Uw3FBf/view?usp=sharing
 
