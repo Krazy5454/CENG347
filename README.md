@@ -1,4 +1,4 @@
-##Tetris on an 8 by 8 LED matrix with joystick control and servo rotation 
+#Tetris on an 8 by 8 LED matrix with joystick control and servo rotation 
 
 # Equipment needed:
 
